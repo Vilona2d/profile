@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>vilona2d portfolio</title>
+    <link rel="stylesheet" href="styles/normalize.css">
+    <link rel="stylesheet" href="styles/styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Oxanium:wght@200..800&family=Press+Start+2P&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <!-- Модальное окно -->
+    <div id="videoModal" class="modal">
+        <span class="close-btn">&times;</span>
+        <div class="modal-content">
+            <iframe id="modalVideo" frameborder="0" allowfullscreen></iframe>
+        </div>
+    </div>
+
+    <main>
+        <header>
+            <a href="portfolio.html" class="back"> < </a>
+            <span class="title">banners</span>
+        </header>
+
+        <div class="videos">
+            <div class="video-container" data-video="gIqYSgAgm_o">
+                <iframe
+                    src="https://www.youtube.com/embed/gIqYSgAgm_o"
+                    frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                    allowfullscreen
+                ></iframe>
+            </div>
+            <div class="video-container" data-video="whP9eaR-1g4">
+                <iframe
+                    src="https://www.youtube.com/embed/whP9eaR-1g4"
+                    frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                    allowfullscreen
+                ></iframe>
+            </div>
+            <div class="video-container" data-video="6n_l1BvMZTg">
+                <iframe
+                    src="https://www.youtube.com/embed/6n_l1BvMZTg"
+                    frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                    allowfullscreen
+                ></iframe>
+            </div>
+            <div class="video-container" data-video="jKfKJthkMEA">
+                <iframe
+                    src="https://www.youtube.com/embed/jKfKJthkMEA"
+                    frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                    allowfullscreen
+                ></iframe>
+            </div>
+            <div class="video-container" data-video="iuwTwsme6qY">
+                <iframe
+                    src="https://www.youtube.com/embed/iuwTwsme6qY"
+                    frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                    allowfullscreen
+                ></iframe>
+            </div>
+        </div>
+    </main>
+
+    <style>
+        .videos {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            padding: 2rem;
+        }
+        .video-container {
+            position: relative;
+            width: 100%;
+            padding-top: 177.77%; /* Для Shorts (9:16) */
+            background: #000;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease;
+            cursor: pointer;
+        }
+        .video-container:hover {
+            transform: scale(1.02);
+        }
+        .video-container iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        /* Модальное окно */
+        .modal {
+            display: none;
+            position: fixed;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.95);
+            z-index: 99999;
+        }
+
+        .modal-content {
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 100%;
+            height: 100%;
+            max-width: 420px; /* Для вертикального видео */
+            max-height: 90vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .modal iframe {
+            width: 100%;
+            height: 100%;
+        }
+
+        .close-btn {
+            position: fixed;
+            right: 30px;
+            top: 30px;
+            color: #fff;
+            font-size: 40px;
+            font-weight: bold;
+            cursor: pointer;
+            z-index: 999999;
+        }
+    </style>
+
+    <script>
+        document.querySelectorAll('.video-container').forEach(container => {
+            container.addEventListener('click', function() {
+                const videoId = this.getAttribute('data-video');
+                const modal = document.getElementById('videoModal');
+                const modalVideo = document.getElementById('modalVideo');
+                
+                modalVideo.src = `https://www.youtube.com/embed/${videoId}?autoplay=1`;
+                modal.style.display = 'block';
+            });
+        });
+
+        document.querySelector('.close-btn').addEventListener('click', function() {
+            const modal = document.getElementById('videoModal');
+            const modalVideo = document.getElementById('modalVideo');
+            
+            modalVideo.src = '';
+            modal.style.display = 'none';
+        });
+
+        document.getElementById('videoModal').addEventListener('click', function(e) {
+            if (e.target === this) {
+                const modalVideo = document.getElementById('modalVideo');
+                modalVideo.src = '';
+                this.style.display = 'none';
+            }
+        });
+
+        document.addEventListener('keydown', function(e) {
+            if (e.key === 'Escape') {
+                const modal = document.getElementById('videoModal');
+                const modalVideo = document.getElementById('modalVideo');
+                
+                modalVideo.src = '';
+                modal.style.display = 'none';
+            }
+        });
+    </script>
+</body>
+</html>

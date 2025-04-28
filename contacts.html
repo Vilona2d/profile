@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>vilona2d portfolio</title>
+    <link rel="stylesheet" href="styles/normalize.css">
+    <link rel="stylesheet" href="styles/styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Oxanium:wght@200..800&family=Press+Start+2P&display=swap" rel="stylesheet">
+    <style>
+        main {
+            background-color: rgba(255, 255, 255, 0.9);
+        }
+        
+        .content {
+            padding: 1rem;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .social-links {
+            display: flex;
+            flex-direction: column;
+            gap: 1.5rem;
+            margin-top: 1rem;
+        }
+
+        .social-link {
+            display: flex;
+            flex-direction: column;
+            padding: 1.2rem;
+            background: #ffc7e0;
+            border-radius: 3px;
+            text-decoration: none;
+            color: black;
+            transition: all 0.3s ease;
+            justify-content: center;
+            align-items: center;
+            height: 3.5rem;
+            clip-path: polygon(
+                0px calc(100% - 16px),
+                8px calc(100% - 16px),
+                8px calc(100% - 8px),
+                16px calc(100% - 8px),
+                16px 100%,
+                calc(100% - 16px) 100%,
+                calc(100% - 16px) calc(100% - 8px),
+                calc(100% - 8px) calc(100% - 8px),
+                calc(100% - 8px) calc(100% - 16px),
+                100% calc(100% - 16px),
+                100% 16px,
+                calc(100% - 8px) 16px,
+                calc(100% - 8px) 8px,
+                calc(100% - 16px) 8px,
+                calc(100% - 16px) 0px,
+                16px 0px,
+                16px 8px,
+                8px 8px,
+                8px 16px,
+                0px 16px
+            );
+        }
+
+        .social-link:hover {
+            background: black;
+            color: white;
+            transform: translateY(-2px);
+        }
+
+        .link-text {
+            font-family: 'Press Start 2P', cursive;
+            font-size: 1.2rem;
+            margin: 0;
+            line-height: 1;
+        }
+
+        .link-url {
+            font-family: 'Oxanium', cursive;
+            font-size: 1rem;
+            opacity: 0.8;
+        }
+
+        @media (max-width: 768px) {
+            .content {
+                padding: 1rem;
+            }
+            
+            .social-link {
+                padding: 1rem;
+            }
+
+            .link-text {
+                font-size: 1rem;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <main>
+        <header>
+            <a href="index.html" class="back"> < </a>
+            <span class="title">contacts</span>
+        </header>
+
+        <div class="content">
+            <div class="social-links">
+                <a href="https://x.com/Vilona2D" target="_blank" class="social-link">
+                    <span class="link-text">Twitter</span>
+                </a>
+                <a href="https://vgen.co/Vilona2D" target="_blank" class="social-link">
+                    <span class="link-text">VGen</span>
+                </a>
+                <a href="https://t.me/vilona2d" target="_blank" class="social-link">
+                    <span class="link-text">Telegram</span>
+                </a>
+            </div>
+        </div>
+    </main>
+</body>
+</html>

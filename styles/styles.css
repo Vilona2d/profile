@@ -1,0 +1,515 @@
+body {
+  font-family: "Press Start 2P", Courier, monospace;
+
+  background-image: url("imgs/background.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+  background-position: center;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  padding: 2rem 0;
+}
+
+main {
+  width: 100%;
+  max-width: 800px;
+  padding: 2rem;
+  background-color: #fff;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  text-align: center;
+  margin: auto;
+
+  clip-path: polygon(
+    0px calc(100% - 16px),
+    8px calc(100% - 16px),
+    8px calc(100% - 8px),
+    16px calc(100% - 8px),
+    16px 100%,
+    calc(100% - 16px) 100%,
+    calc(100% - 16px) calc(100% - 8px),
+    calc(100% - 8px) calc(100% - 8px),
+    calc(100% - 8px) calc(100% - 16px),
+    100% calc(100% - 16px),
+    100% 16px,
+    calc(100% - 8px) 16px,
+    calc(100% - 8px) 8px,
+    calc(100% - 16px) 8px,
+    calc(100% - 16px) 0px,
+    16px 0px,
+    16px 8px,
+    8px 8px,
+    8px 16px,
+    0px 16px
+  );
+}
+
+/* index */
+
+.inner {
+  display: flex;
+  justify-content: space-between;
+  margin: 20px;
+}
+
+.inner-left { 
+  width: 50%;
+  height: 100%;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: flex-end;
+
+  text-align: right;
+}
+
+.nickname::before {
+  content: "Vilona2d";
+}
+
+.nickname {
+  font-size: 200%;
+  margin-top: 5%;
+}
+
+.description::before {
+  content: "Hi, I'm Vilona! I'm a 2d animator, NSFW animator and editor.";
+}
+
+.description {
+  font-size: 100%;
+  margin-top: 10%;
+}
+
+.inner-right {
+  width: 50%;
+  height: 100%;
+}
+
+.avatar {
+  display: block;
+  width: 30%;
+  height: 30%;
+}
+
+.mainBtns {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  margin-left: 8%;
+}
+
+.portfolioBtn, .priceBtn, .termsBtn, .contactsBtn {
+  background-color: #ffc7e0;
+  border: none;
+  color: black;
+  padding: 8%;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  cursor: pointer;
+  border-radius: 3px;
+  transition: background-color 0.3s;
+
+
+  clip-path: polygon(
+    0px calc(100% - 16px),
+    8px calc(100% - 16px),
+    8px calc(100% - 8px),
+    16px calc(100% - 8px),
+    16px 100%,
+    calc(100% - 16px) 100%,
+    calc(100% - 16px) calc(100% - 8px),
+    calc(100% - 8px) calc(100% - 8px),
+    calc(100% - 8px) calc(100% - 16px),
+    100% calc(100% - 16px),
+    100% 16px,
+    calc(100% - 8px) 16px,
+    calc(100% - 8px) 8px,
+    calc(100% - 16px) 8px,
+    calc(100% - 16px) 0px,
+    16px 0px,
+    16px 8px,
+    8px 8px,
+    8px 16px,
+    0px 16px
+  );
+}
+
+.portfolioBtn:hover, .priceBtn:hover, .termsBtn:hover, .contactsBtn:hover {
+  background-color: black;
+  color: white;
+}
+
+@media (max-width: 768px) {
+  .inner {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .inner-left {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 20px;
+  }
+
+  .inner-left>.avatar {
+    width: 150px;
+  }
+
+  .description {
+    text-align: center;
+    margin-top: 10%;
+    width: 150%;
+  }
+  
+  .inner-right {
+      width: 100%;
+      display: flex;
+      justify-content: center;
+  }
+
+  .mainBtns {
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+      margin-left: 0px;
+  }
+
+  .portfolioBtn,
+  .priceBtn,
+  .termsBtn,
+  .contactsBtn {
+      width: 100%;
+      padding: 12px;
+  }
+}
+
+/* portfolio */
+
+header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 1rem;
+}
+
+.back {
+  font-size: 1.5rem;
+  text-decoration: none;
+}
+
+.title {
+  flex-grow: 1;
+  text-align: center;
+  font-size: 1.2rem;
+}
+
+.title {
+  font-size: 150%;
+}
+
+.back {
+  font-size: 150%;
+  text-decoration: none;
+  color: black;
+}
+
+.portfolio-inner {
+  margin-top: 3%;
+  width: 100%;
+  gap: 5%;
+
+  display: flex;
+  flex-direction: column;
+}
+
+.portfolio-inner-top {
+  width: 100%;
+
+  gap: 5%;
+
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+.portfolio-inner-bottom {
+  width: 100%;
+  margin-top: 2%;
+  gap: 5%;
+
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+
+.stAnimBtn, .mmvBtn, .hentBtn, .steamBtn {
+  background-color: #ffc7e0;
+  border: none;
+  color: black;
+
+  padding: 4%;
+  width: 30%;
+
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  cursor: pointer;
+  border-radius: 3px;
+  transition: background-color 0.3s;
+
+
+  clip-path: polygon(
+    0px calc(100% - 16px),
+    8px calc(100% - 16px),
+    8px calc(100% - 8px),
+    16px calc(100% - 8px),
+    16px 100%,
+    calc(100% - 16px) 100%,
+    calc(100% - 16px) calc(100% - 8px),
+    calc(100% - 8px) calc(100% - 8px),
+    calc(100% - 8px) calc(100% - 16px),
+    100% calc(100% - 16px),
+    100% 16px,
+    calc(100% - 8px) 16px,
+    calc(100% - 8px) 8px,
+    calc(100% - 16px) 8px,
+    calc(100% - 16px) 0px,
+    16px 0px,
+    16px 8px,
+    8px 8px,
+    8px 16px,
+    0px 16px
+  );
+}
+
+.composBtn {
+  background-color: #ffc7e0;
+  border: none;
+  color: black;
+
+  padding: 5%;
+  width: 30%;
+
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  cursor: pointer;
+  border-radius: 3px;
+  transition: background-color 0.3s;
+
+
+  clip-path: polygon(
+    0px calc(100% - 16px),
+    8px calc(100% - 16px),
+    8px calc(100% - 8px),
+    16px calc(100% - 8px),
+    16px 100%,
+    calc(100% - 16px) 100%,
+    calc(100% - 16px) calc(100% - 8px),
+    calc(100% - 8px) calc(100% - 8px),
+    calc(100% - 8px) calc(100% - 16px),
+    100% calc(100% - 16px),
+    100% 16px,
+    calc(100% - 8px) 16px,
+    calc(100% - 8px) 8px,
+    calc(100% - 16px) 8px,
+    calc(100% - 16px) 0px,
+    16px 0px,
+    16px 8px,
+    8px 8px,
+    8px 16px,
+    0px 16px
+  );
+}
+
+.stAnimBtn:hover, .mmvBtn:hover, .hentBtn:hover, .steamBtn:hover, .composBtn:hover {
+  background-color: black;
+  color: white;
+}
+
+@media (max-width: 860px) {
+  .portfolio-inner {
+    margin-top: 3%;
+    width: 100%;
+    gap: 5%;
+  
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .portfolio-inner-top {
+    width: 100%;
+    gap: 5%;
+  
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .portfolio-inner-bottom {
+    width: 100%;
+    gap: 5%;
+    margin-top: 0%;
+  
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .stAnimBtn, .mmvBtn, .hentBtn, .steamBtn, .composBtn {
+    width: 80%;
+    margin: 1%;
+  }
+
+  .composBtn {
+    padding: 3%;
+  }
+}
+
+/* Terms of Service */
+.tos-content {
+    margin-top: 2rem;
+    text-align: left;
+    padding: 0 1rem;
+}
+
+.tos-section {
+    margin-bottom: 2rem;
+    padding: 1rem;
+    background-color: #fff;
+    border-radius: 4px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+.tos-section h2 {
+    color: #ffc7e0;
+    font-size: 1.2rem;
+    margin-bottom: 1rem;
+    text-transform: uppercase;
+}
+
+.tos-section p {
+    margin-bottom: 0.8rem;
+    line-height: 1.6;
+    font-size: 0.9rem;
+}
+
+.tos-section ul {
+    list-style-type: none;
+    padding-left: 0;
+}
+
+.tos-section ul li {
+    margin-bottom: 0.8rem;
+    line-height: 1.6;
+    font-size: 0.9rem;
+    padding-left: 1.5rem;
+    position: relative;
+}
+
+.tos-section ul li:before {
+    content: "•";
+    color: #ffc7e0;
+    position: absolute;
+    left: 0;
+}
+
+@media (max-width: 768px) {
+    .tos-content {
+        padding: 0 0.5rem;
+    }
+
+    .tos-section {
+        padding: 0.8rem;
+    }
+
+    .tos-section h2 {
+        font-size: 1rem;
+    }
+
+    .tos-section p,
+    .tos-section ul li {
+        font-size: 0.8rem;
+    }
+}
+
+/* Price List */
+.price-content {
+    margin-top: 2rem;
+    text-align: left;
+    padding: 0 1rem;
+}
+
+.price-section {
+    margin-bottom: 2rem;
+    padding: 1rem;
+    background-color: #fff;
+    border-radius: 4px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+.price-section h2 {
+    color: #ffc7e0;
+    font-size: 1.2rem;
+    margin-bottom: 1rem;
+    text-transform: uppercase;
+}
+
+.price-section p {
+    margin-bottom: 0.8rem;
+    line-height: 1.6;
+    font-size: 0.9rem;
+}
+
+.price-section ul {
+    list-style-type: none;
+    padding-left: 0;
+}
+
+.price-section ul li {
+    margin-bottom: 0.8rem;
+    line-height: 1.6;
+    font-size: 0.9rem;
+    padding-left: 1.5rem;
+    position: relative;
+}
+
+.price-section ul li:before {
+    content: "•";
+    color: #ffc7e0;
+    position: absolute;
+    left: 0;
+}
+
+@media (max-width: 768px) {
+    .price-content {
+        padding: 0 0.5rem;
+    }
+
+    .price-section {
+        padding: 0.8rem;
+    }
+
+    .price-section h2 {
+        font-size: 1rem;
+    }
+
+    .price-section p,
+    .price-section ul li {
+        font-size: 0.8rem;
+    }
+}
