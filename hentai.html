@@ -13,6 +13,19 @@
 </head>
 
 <body>
+    <!-- Модальное окно для проверки возраста -->
+    <div id="ageVerificationModal" class="modal age-verification">
+        <div class="age-verification-content">
+            <h2>Age Verification Required</h2>
+            <p>This content is intended for adults only (18+).</p>
+            <p>By entering this section, you confirm that you are of legal age to view adult content.</p>
+            <div class="age-verification-buttons">
+                <button id="confirmAge" class="cyber-button">I am 18 or older</button>
+                <button id="rejectAge" class="cyber-button">I am under 18</button>
+            </div>
+        </div>
+    </div>
+
     <!-- Модальное окно -->
     <div id="videoModal" class="modal">
         <span class="close-btn">&times;</span>
@@ -115,9 +128,84 @@
             cursor: pointer;
             z-index: 999999;
         }
+
+        /* Стили для модального окна проверки возраста */
+        .age-verification {
+            display: block;
+            background: rgba(0, 0, 0, 0.85);
+            backdrop-filter: blur(10px);
+        }
+
+        .age-verification-content {
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background: rgba(20, 20, 20, 0.9);
+            padding: 2rem;
+            border-radius: 8px;
+            text-align: center;
+            max-width: 500px;
+            width: 90%;
+            border: 2px solid #ff00ff;
+            box-shadow: 0 0 20px rgba(255, 0, 255, 0.3);
+        }
+
+        .age-verification-content h2 {
+            color: #ff00ff;
+            font-family: 'Press Start 2P', cursive;
+            margin-bottom: 1.5rem;
+            font-size: 1.5rem;
+        }
+
+        .age-verification-content p {
+            color: #fff;
+            margin-bottom: 1rem;
+            line-height: 1.5;
+        }
+
+        .age-verification-buttons {
+            display: flex;
+            gap: 1rem;
+            justify-content: center;
+            margin-top: 2rem;
+        }
+
+        .cyber-button {
+            background: transparent;
+            border: 2px solid #ff00ff;
+            color: #ff00ff;
+            padding: 0.8rem 1.5rem;
+            font-family: 'Press Start 2P', cursive;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            text-transform: uppercase;
+            font-size: 0.8rem;
+        }
+
+        .cyber-button:hover {
+            background: #ff00ff;
+            color: #000;
+            box-shadow: 0 0 15px rgba(255, 0, 255, 0.5);
+        }
     </style>
 
     <script>
+        // Скрипт для проверки возраста
+        document.addEventListener('DOMContentLoaded', function() {
+            const ageModal = document.getElementById('ageVerificationModal');
+            const confirmBtn = document.getElementById('confirmAge');
+            const rejectBtn = document.getElementById('rejectAge');
+
+            confirmBtn.addEventListener('click', function() {
+                ageModal.style.display = 'none';
+            });
+
+            rejectBtn.addEventListener('click', function() {
+                window.location.href = 'portfolio.html';
+            });
+        });
+
         document.querySelectorAll('.video-container').forEach(container => {
             container.addEventListener('click', function() {
                 const videoSrc = this.getAttribute('data-video');
