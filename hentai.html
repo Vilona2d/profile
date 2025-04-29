@@ -43,25 +43,41 @@
 
         <div class="videos">
             <div class="video-container" data-video="styles/videos/hentai anims/1.mp4">
-                <div class="loading-indicator">Loading video...</div>
+                <div class="preview-image" style="background-image: url('styles/videos/hentai anims/1.prev.png')"></div>
+                <div class="loading-indicator">
+                    <span class="loading-text">Loading video</span>
+                    <span class="loading-dots"></span>
+                </div>
                 <video autoplay loop muted playsinline>
                     <source src="styles/videos/hentai anims/1.mp4" type="video/mp4">
                 </video>
             </div>
             <div class="video-container" data-video="styles/videos/hentai anims/2.mp4">
-                <div class="loading-indicator">Loading video...</div>
+                <div class="preview-image" style="background-image: url('styles/videos/hentai anims/2.prev.png')"></div>
+                <div class="loading-indicator">
+                    <span class="loading-text">Loading video</span>
+                    <span class="loading-dots"></span>
+                </div>
                 <video autoplay loop muted playsinline>
                     <source src="styles/videos/hentai anims/2.mp4" type="video/mp4">
                 </video>
             </div>
             <div class="video-container" data-video="styles/videos/hentai anims/3.mp4">
-                <div class="loading-indicator">Loading video...</div>
+                <div class="preview-image" style="background-image: url('styles/videos/hentai anims/3.prev.png')"></div>
+                <div class="loading-indicator">
+                    <span class="loading-text">Loading video</span>
+                    <span class="loading-dots"></span>
+                </div>
                 <video autoplay loop muted playsinline>
                     <source src="styles/videos/hentai anims/3.mp4" type="video/mp4">
                 </video>
             </div>
             <div class="video-container" data-video="styles/videos/hentai anims/4.mp4">
-                <div class="loading-indicator">Loading video...</div>
+                <div class="preview-image" style="background-image: url('styles/videos/hentai anims/4.prev.png')"></div>
+                <div class="loading-indicator">
+                    <span class="loading-text">Loading video</span>
+                    <span class="loading-dots"></span>
+                </div>
                 <video autoplay loop muted playsinline>
                     <source src="styles/videos/hentai anims/4.mp4" type="video/mp4">
                 </video>
@@ -199,17 +215,68 @@
             box-shadow: 0 0 15px rgba(255, 0, 255, 0.5);
         }
 
+        .preview-image {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-size: cover;
+            background-position: center;
+            filter: blur(5px) brightness(0.7);
+            transition: opacity 0.3s ease;
+        }
+
+        .video-container video.loaded + .preview-image {
+            opacity: 0;
+        }
+
         .loading-indicator {
             position: absolute;
             top: 50%;
             left: 50%;
             transform: translate(-50%, -50%);
-            color: #ff00ff;
+            color: #ffffff;
             font-family: 'Press Start 2P', cursive;
-            font-size: 0.8rem;
+            font-size: 1.2rem;
             text-align: center;
-            z-index: 1;
-            text-shadow: 0 0 10px rgba(255, 0, 255, 0.5);
+            z-index: 2;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 0.5rem;
+            -webkit-text-stroke: 1px #000000;
+        }
+
+        .loading-text {
+            position: relative;
+            color: #ffffff;
+            -webkit-text-stroke: 1px #000000;
+        }
+
+        .loading-dots::after {
+            content: '';
+            animation: loadingDots 1.5s infinite;
+            display: inline-block;
+            width: 1.5em;
+            text-align: left;
+        }
+
+        @keyframes loadingDots {
+            0% { content: ''; }
+            25% { content: '.'; }
+            50% { content: '..'; }
+            75% { content: '...'; }
+            100% { content: ''; }
+        }
+
+        .video-container video {
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+
+        .video-container video.loaded {
+            opacity: 1;
         }
     </style>
 
