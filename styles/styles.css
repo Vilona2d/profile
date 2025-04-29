@@ -513,3 +513,104 @@ header {
         font-size: 0.8rem;
     }
 }
+
+/* Общие стили для мобильных устройств */
+@media (max-width: 768px) {
+  body {
+    padding: 1rem 0;
+  }
+
+  main {
+    padding: 1rem;
+    margin: 0.5rem;
+    width: calc(100% - 1rem);
+  }
+
+  /* Улучшенная адаптация для портфолио */
+  .portfolio-inner {
+    margin-top: 1rem;
+    gap: 1rem;
+  }
+
+  .portfolio-inner-top,
+  .portfolio-inner-bottom {
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  .stAnimBtn, .mmvBtn, .hentBtn, .steamBtn, .composBtn {
+    width: 100%;
+    padding: 1rem;
+    font-size: 0.9rem;
+  }
+
+  /* Улучшенная адаптация для видео-сетки */
+  .videos {
+    padding: 1rem;
+    gap: 1rem;
+  }
+
+  .shorts-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .full-videos {
+    grid-template-columns: 1fr;
+  }
+
+  /* Улучшенная адаптация для модального окна */
+  .modal-content {
+    max-width: 95vw;
+    max-height: 95vh;
+  }
+
+  .close-btn {
+    right: 15px;
+    top: 15px;
+    font-size: 30px;
+  }
+
+  /* Улучшенная адаптация для заголовков */
+  header {
+    padding: 0.5rem;
+  }
+
+  .title {
+    font-size: 1rem;
+  }
+
+  .back {
+    font-size: 1.2rem;
+  }
+}
+
+/* Дополнительные стили для очень маленьких экранов */
+@media (max-width: 480px) {
+  main {
+    padding: 0.5rem;
+  }
+
+  .nickname {
+    font-size: 1.5rem;
+  }
+
+  .description {
+    font-size: 0.8rem;
+  }
+
+  .portfolioBtn, .priceBtn, .termsBtn, .contactsBtn {
+    padding: 0.8rem;
+    font-size: 0.8rem;
+  }
+}
+
+/* Улучшенные стили для планшетов */
+@media (min-width: 769px) and (max-width: 1024px) {
+  .shorts-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .full-videos {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}

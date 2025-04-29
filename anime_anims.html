@@ -99,6 +99,8 @@
             display: grid;
             gap: 2rem;
             padding: 2rem;
+            width: 100%;
+            box-sizing: border-box;
         }
 
         .shorts-grid {
@@ -118,14 +120,17 @@
             box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
             transition: transform 0.3s ease;
             cursor: pointer;
+            margin: 0 auto;
         }
 
         .shorts-grid .video-container {
-            padding-top: 177.77%; /* Для Shorts (9:16) */
+            padding-top: 177.77%;
+            max-width: 400px;
         }
 
         .full-videos .video-container {
-            padding-top: 56.25%; /* Для обычных видео (16:9) */
+            padding-top: 56.25%;
+            max-width: 800px;
         }
 
         .video-container:hover {
@@ -146,6 +151,8 @@
             align-items: center;
             padding: 2rem;
             margin-top: 1rem;
+            width: 100%;
+            box-sizing: border-box;
         }
 
         .divider-line {
@@ -164,6 +171,7 @@
             height: 100%;
             background-color: rgba(0, 0, 0, 0.95);
             z-index: 99999;
+            overflow: hidden;
         }
 
         .modal-content {
@@ -178,15 +186,21 @@
             display: flex;
             justify-content: center;
             align-items: center;
+            padding: 20px;
+            box-sizing: border-box;
         }
 
         .modal.shorts .modal-content {
             max-width: 420px;
+            width: 100%;
+            height: auto;
+            aspect-ratio: 9/16;
         }
 
         .modal iframe {
             width: 100%;
             height: 100%;
+            border: none;
         }
 
         .close-btn {
@@ -198,6 +212,51 @@
             font-weight: bold;
             cursor: pointer;
             z-index: 999999;
+            background: none;
+            border: none;
+            padding: 10px;
+            line-height: 1;
+        }
+
+        @media (max-width: 768px) {
+            .videos {
+                gap: 1rem;
+                padding: 1rem;
+            }
+
+            .shorts-grid,
+            .full-videos {
+                grid-template-columns: 1fr;
+            }
+
+            .video-container {
+                max-width: 100%;
+            }
+
+            .section-divider {
+                padding: 1rem;
+            }
+
+            .modal-content {
+                padding: 10px;
+            }
+
+            .close-btn {
+                right: 15px;
+                top: 15px;
+                font-size: 30px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .videos {
+                gap: 0.5rem;
+                padding: 0.5rem;
+            }
+
+            .section-divider {
+                padding: 0.5rem;
+            }
         }
     </style>
 
