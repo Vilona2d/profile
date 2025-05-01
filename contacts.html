@@ -83,6 +83,50 @@
             opacity: 0.8;
         }
 
+        .tos-notice {
+            margin-top: 1rem;
+            padding: 1rem;
+            background: #ffffff;
+            border-radius: 3px;
+            text-align: center;
+            font-family: 'Press Start 2P', cursive;
+            font-size: 0.8rem;
+            line-height: 1.5;
+            clip-path: polygon(
+                0px calc(100% - 16px),
+                8px calc(100% - 16px),
+                8px calc(100% - 8px),
+                16px calc(100% - 8px),
+                16px 100%,
+                calc(100% - 16px) 100%,
+                calc(100% - 16px) calc(100% - 8px),
+                calc(100% - 8px) calc(100% - 8px),
+                calc(100% - 8px) calc(100% - 16px),
+                100% calc(100% - 16px),
+                100% 16px,
+                calc(100% - 8px) 16px,
+                calc(100% - 8px) 8px,
+                calc(100% - 16px) 8px,
+                calc(100% - 16px) 0px,
+                16px 0px,
+                16px 8px,
+                8px 8px,
+                8px 16px,
+                0px 16px
+            );
+        }
+
+        .tos-notice a {
+            color: #ff00ff;
+            text-decoration: none;
+            font-weight: bold;
+            transition: color 0.3s ease;
+        }
+
+        .tos-notice a:hover {
+            color: #000000;
+        }
+
         @media (max-width: 768px) {
             .content {
                 padding: 1rem;
@@ -94,6 +138,11 @@
 
             .link-text {
                 font-size: 1rem;
+            }
+            
+            .tos-notice {
+                padding: 1rem;
+                font-size: 0.8rem;
             }
         }
     </style>
@@ -117,6 +166,10 @@
                 <a href="https://t.me/vilona2d" target="_blank" class="social-link">
                     <span class="link-text">Telegram</span>
                 </a>
+            </div>
+
+            <div class="tos-notice">
+                By commissioning me, you agree to my <a href="tos.html">Terms of Service</a>. Please review them before proceeding with your commission.
             </div>
         </div>
     </main>
