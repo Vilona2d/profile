@@ -13,7 +13,6 @@
 </head>
 
 <body>
-    <!-- Модальное окно -->
     <div id="videoModal" class="modal">
         <span class="close-btn">&times;</span>
         <div class="modal-content">
@@ -94,7 +93,7 @@
         }
 
         .shorts-grid .video-container {
-            padding-top: 100%; /* Квадрат 1:1 */
+            padding-top: 100%;
         }
 
         .video-container:hover {
@@ -110,7 +109,6 @@
             object-fit: cover;
         }
 
-        /* Модальное окно */
         .modal {
             display: none;
             position: fixed;
@@ -164,7 +162,6 @@
                 const modal = document.getElementById('videoModal');
                 const modalVideo = document.getElementById('modalVideo');
                 
-                // Определяем, это Shorts или обычное видео
                 const isShorts = this.closest('.shorts-grid') !== null;
                 modal.classList.toggle('shorts', isShorts);
                 

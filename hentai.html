@@ -13,7 +13,6 @@
 </head>
 
 <body>
-    <!-- Модальное окно для проверки возраста -->
     <div id="ageVerificationModal" class="modal age-verification">
         <div class="age-verification-content">
             <h2>Age Verification Required</h2>
@@ -26,7 +25,6 @@
         </div>
     </div>
 
-    <!-- Модальное окно -->
     <div id="videoModal" class="modal">
         <span class="close-btn">&times;</span>
         <video id="modalVideo" controls loop>
@@ -121,7 +119,6 @@
             opacity: 1;
         }
 
-        /* Модальное окно */
         .modal {
             display: none;
             position: fixed;
@@ -155,7 +152,6 @@
             z-index: 999999;
         }
 
-        /* Стили для модального окна проверки возраста */
         .age-verification {
             display: block;
             background: rgba(0, 0, 0, 0.85);
@@ -281,7 +277,6 @@
     </style>
 
     <script>
-        // Скрипт для проверки возраста
         document.addEventListener('DOMContentLoaded', function() {
             const ageModal = document.getElementById('ageVerificationModal');
             const confirmBtn = document.getElementById('confirmAge');
@@ -337,7 +332,6 @@
             }
         });
 
-        // Обработка загрузки видео
         document.querySelectorAll('.video-container video').forEach(video => {
             video.addEventListener('loadeddata', function() {
                 this.classList.add('loaded');

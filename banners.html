@@ -13,7 +13,6 @@
 </head>
 
 <body>
-    <!-- Модальное окно -->
     <div id="videoModal" class="modal">
         <span class="close-btn">&times;</span>
         <div class="modal-content">
@@ -81,7 +80,7 @@
         .video-container {
             position: relative;
             width: 100%;
-            padding-top: 177.77%; /* Для Shorts (9:16) */
+            padding-top: 177.77%;
             background: #000;
             border-radius: 8px;
             overflow: hidden;
@@ -101,7 +100,6 @@
             object-fit: cover;
         }
 
-        /* Модальное окно */
         .modal {
             display: none;
             position: fixed;
@@ -120,7 +118,7 @@
             transform: translate(-50%, -50%);
             width: 100%;
             height: 100%;
-            max-width: 420px; /* Для вертикального видео */
+            max-width: 420px;   
             max-height: 90vh;
             display: flex;
             justify-content: center;
