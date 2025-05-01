@@ -56,9 +56,52 @@
             ease: "power1.out"
         });
 
-        const tl = gsap.timeline({
-            delay: 0.3
-        });
+        const tl = gsap.timeline();
+
+        tl.fromTo('.avatar',
+            {
+                x: -200,
+                opacity: 0,
+                visibility: "hidden"
+            },
+            {
+                x: 0,
+                opacity: 1,
+                visibility: "visible",
+                duration: 1.2,
+                ease: "power1.out"
+            }
+        )
+        .fromTo('.nickname',
+            {
+                x: -200,
+                opacity: 0,
+                visibility: "hidden"
+            },
+            {
+                x: 0,
+                opacity: 1,
+                visibility: "visible",
+                duration: 1.2,
+                ease: "power1.out"
+            },
+            "-=0.8"
+        )
+        .fromTo('.description',
+            {
+                x: -200,
+                opacity: 0,
+                visibility: "hidden"
+            },
+            {
+                x: 0,
+                opacity: 1,
+                visibility: "visible",
+                duration: 1.2,
+                ease: "power1.out"
+            },
+            "-=0.8"
+        );
 
         document.querySelectorAll('.mainBtns button').forEach((button, index) => {
             tl.fromTo(button,
