@@ -380,7 +380,6 @@ header {
   }
 }
 
-/* Terms of Service */
 .tos-content {
     margin-top: 2rem;
     text-align: left;
@@ -447,7 +446,6 @@ header {
     }
 }
 
-/* Price List */
 .price-content {
     margin-top: 2rem;
     text-align: left;
@@ -514,7 +512,6 @@ header {
     }
 }
 
-/* Общие стили для мобильных устройств */
 @media (max-width: 768px) {
   body {
     padding: 1rem 0;
@@ -526,7 +523,6 @@ header {
     width: calc(100% - 1rem);
   }
 
-  /* Улучшенная адаптация для портфолио */
   .portfolio-inner {
     margin-top: 1rem;
     gap: 1rem;
@@ -544,7 +540,6 @@ header {
     font-size: 0.9rem;
   }
 
-  /* Улучшенная адаптация для видео-сетки */
   .videos {
     padding: 1rem;
     gap: 1rem;
@@ -558,7 +553,6 @@ header {
     grid-template-columns: 1fr;
   }
 
-  /* Улучшенная адаптация для модального окна */
   .modal-content {
     max-width: 95vw;
     max-height: 95vh;
@@ -570,7 +564,6 @@ header {
     font-size: 30px;
   }
 
-  /* Улучшенная адаптация для заголовков */
   header {
     padding: 0.5rem;
   }
@@ -584,7 +577,6 @@ header {
   }
 }
 
-/* Дополнительные стили для очень маленьких экранов */
 @media (max-width: 480px) {
   main {
     padding: 0.5rem;
@@ -604,7 +596,6 @@ header {
   }
 }
 
-/* Улучшенные стили для планшетов */
 @media (min-width: 769px) and (max-width: 1024px) {
   .shorts-grid {
     grid-template-columns: repeat(2, 1fr);
