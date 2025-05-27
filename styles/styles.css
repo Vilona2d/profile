@@ -605,3 +605,19 @@ header {
     grid-template-columns: repeat(2, 1fr);
   }
 }
+
+.corner-svg {
+  position: absolute;
+  right: 10px;
+  bottom: 10px;
+  z-index: 3;
+  color: #fff;
+  pointer-events: none;
+  filter: drop-shadow(0 0 4px #000a);
+  opacity: 0.6;
+}
+
+.corner-svg svg {
+  width: 22px;
+  height: 22px;
+}
