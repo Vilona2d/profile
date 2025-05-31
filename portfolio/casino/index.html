@@ -4,12 +4,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>vilona2d portfolio</title>
-    <link rel="stylesheet" href="styles/normalize.css">
-    <link rel="stylesheet" href="styles/styles.css">
+    <link rel="stylesheet" href="../../styles/normalize.css">
+    <link rel="stylesheet" href="../../styles/styles.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Oxanium:wght@200..800&family=Press+Start+2P&display=swap" rel="stylesheet">
-    <link rel="icon" type="image/png" href="favicon.png">
+    <link rel="icon" type="image/png" href="../../favicon.png">
 </head>
 
 <body>
@@ -22,69 +22,46 @@
 
     <main>
         <header>
-            <a href="portfolio.html" class="back"> < </a>
-            <span class="title">anime animations</span>
+            <a href="../../portfolio" class="back"> < </a>
+            <span class="title">casino animations</span>
         </header>
 
         <div class="videos shorts-grid">
-            <div class="video-container" data-video="bV6rcnzZKU0">
+            <div class="video-container" data-video="08UQa3UXiBM">
                 <iframe
-                    src="https://www.youtube.com/embed/bV6rcnzZKU0"
+                    src="https://www.youtube.com/embed/08UQa3UXiBM"
                     frameborder="0"
                     allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                     allowfullscreen
                 ></iframe>
             </div>
-            <div class="video-container" data-video="mOUNvAGsuHQ">
+            <div class="video-container" data-video="RG7wv3XTBYo">
                 <iframe
-                    src="https://www.youtube.com/embed/mOUNvAGsuHQ"
+                    src="https://www.youtube.com/embed/RG7wv3XTBYo"
                     frameborder="0"
                     allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                     allowfullscreen
                 ></iframe>
             </div>
-            <div class="video-container" data-video="Spvpoq9N80o">
+            <div class="video-container" data-video="-6XZ7tnoolY">
                 <iframe
-                    src="https://www.youtube.com/embed/Spvpoq9N80o"
+                    src="https://www.youtube.com/embed/-6XZ7tnoolY"
                     frameborder="0"
                     allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                     allowfullscreen
                 ></iframe>
             </div>
-            <div class="video-container" data-video="B50qcXb2Sew">
+            <div class="video-container" data-video="7gCsemC-1MI">
                 <iframe
-                    src="https://www.youtube.com/embed/B50qcXb2Sew"
+                    src="https://www.youtube.com/embed/7gCsemC-1MI"
                     frameborder="0"
                     allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                     allowfullscreen
                 ></iframe>
             </div>
-        </div>
-
-        <div class="section-divider">
-            <span class="divider-line"></span>
-        </div>
-
-        <div class="videos full-videos">
-            <div class="video-container" data-video="QkaffJwbAMQ">
+            <div class="video-container" data-video="5oVA5GefgIw">
                 <iframe
-                    src="https://www.youtube.com/embed/QkaffJwbAMQ"
-                    frameborder="0"
-                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                    allowfullscreen
-                ></iframe>
-            </div>
-            <div class="video-container" data-video="Kxq9kHQemX8">
-                <iframe
-                    src="https://www.youtube.com/embed/Kxq9kHQemX8"
-                    frameborder="0"
-                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                    allowfullscreen
-                ></iframe>
-            </div>
-            <div class="video-container" data-video="ejJpIZ4PVvk">
-                <iframe
-                    src="https://www.youtube.com/embed/ejJpIZ4PVvk"
+                    src="https://www.youtube.com/embed/5oVA5GefgIw"
                     frameborder="0"
                     allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                     allowfullscreen
@@ -101,16 +78,10 @@
             display: grid;
             gap: 2rem;
             padding: 2rem;
-            width: 100%;
-            box-sizing: border-box;
         }
 
         .shorts-grid {
             grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-        }
-
-        .full-videos {
-            grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
         }
 
         .video-container {
@@ -122,17 +93,10 @@
             box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
             transition: transform 0.3s ease;
             cursor: pointer;
-            margin: 0 auto;
         }
 
         .shorts-grid .video-container {
-            padding-top: 177.77%;
-            max-width: 400px;
-        }
-
-        .full-videos .video-container {
-            padding-top: 56.25%;
-            max-width: 800px;
+            padding-top: 100%;
         }
 
         .video-container:hover {
@@ -148,22 +112,6 @@
             object-fit: cover;
         }
 
-        .section-divider {
-            display: flex;
-            align-items: center;
-            padding: 2rem;
-            margin-top: 1rem;
-            width: 100%;
-            box-sizing: border-box;
-        }
-
-        .divider-line {
-            width: 100%;
-            height: 2px;
-            background: rgba(255, 199, 224, 0.3);
-        }
-
-        /* Модальное окно */
         .modal {
             display: none;
             position: fixed;
@@ -173,7 +121,6 @@
             height: 100%;
             background-color: rgba(0, 0, 0, 0.95);
             z-index: 99999;
-            overflow: hidden;
         }
 
         .modal-content {
@@ -188,21 +135,15 @@
             display: flex;
             justify-content: center;
             align-items: center;
-            padding: 20px;
-            box-sizing: border-box;
         }
 
         .modal.shorts .modal-content {
             max-width: 420px;
-            width: 100%;
-            height: auto;
-            aspect-ratio: 9/16;
         }
 
         .modal iframe {
             width: 100%;
             height: 100%;
-            border: none;
         }
 
         .close-btn {
@@ -214,51 +155,6 @@
             font-weight: bold;
             cursor: pointer;
             z-index: 999999;
-            background: none;
-            border: none;
-            padding: 10px;
-            line-height: 1;
-        }
-
-        @media (max-width: 768px) {
-            .videos {
-                gap: 1rem;
-                padding: 1rem;
-            }
-
-            .shorts-grid,
-            .full-videos {
-                grid-template-columns: 1fr;
-            }
-
-            .video-container {
-                max-width: 100%;
-            }
-
-            .section-divider {
-                padding: 1rem;
-            }
-
-            .modal-content {
-                padding: 10px;
-            }
-
-            .close-btn {
-                right: 15px;
-                top: 15px;
-                font-size: 30px;
-            }
-        }
-
-        @media (max-width: 480px) {
-            .videos {
-                gap: 0.5rem;
-                padding: 0.5rem;
-            }
-
-            .section-divider {
-                padding: 0.5rem;
-            }
         }
     </style>
 
@@ -305,4 +201,3 @@
     </script>
 </body>
 </html>
-
